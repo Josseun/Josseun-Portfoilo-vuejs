@@ -48,10 +48,10 @@
         </div>
       </header>
       <aside
-        class="container flex justify-center lg:justify-end mt-20 lg:mt-0 items-center flex-wrap"
+        class="flex justify-center lg:justify-end mt-20 lg:mt-0 items-center flex-wrap"
       >
         <figure
-          class="card relative m-7.5 md:w-105 md:h-105 md:before:w-112.5 w-70 h-87.5 before:w-75 before:h-75 before:border-25 before:border-primary before:shadow-[7px_7px_21px_secondary,-7px_-7px_21px_secondary]"
+          class="relative m-7.5 md:w-105 md:h-105 md:before:w-112.5 w-70 h-87.5 before:w-75 before:h-75 before:border-25 before:border-primary before:shadow-[7px_7px_21px_secondary,-7px_-7px_21px_secondary]"
         >
           <div
             class="relative w-full h-full bg-cover transform translate-x-2.5 translate-y-2.5"
@@ -59,7 +59,7 @@
             <img
               src="@\assets\Images\King.jpg"
               alt="Hero Picture"
-              class="max-w-1/2"
+              class="rounded-2xl object-contain"
             />
           </div>
         </figure>
