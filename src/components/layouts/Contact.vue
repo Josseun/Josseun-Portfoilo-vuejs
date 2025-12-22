@@ -42,6 +42,7 @@ import Input from "@/components/UI/Input.vue";
 import Button from "@/components/UI/Button.vue";
 import { ref } from "vue";
 
+const rows =ref(6)
 
 const { isDarkMode } = useDarkMode();
 

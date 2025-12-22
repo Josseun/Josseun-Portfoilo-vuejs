@@ -1,15 +1,18 @@
 ```vue
 <template>
   <section
-  data-aos="zoom-in"
-  class="flex items-center justify-center min-h-screen mt-20 lg:mt-0">
+    data-aos="zoom-in"
+    class="flex items-center justify-center min-h-screen mt-20 lg:mt-0"
+  >
     <header
-      :class="['absolute w-1/2 aspect-16/5 -skew-x-12 rounded-full bg-gradient-to-r from-[#00c6cc] via-[#785ae4] to-secondary blur-[100px] left-10 top-0 hidden md:block',
+      :class="[
+        'absolute w-1/2 aspect-16/5 -skew-x-12 rounded-full bg-gradient-to-r from-[#00c6cc] via-[#785ae4] to-secondary blur-[100px] left-10 top-0 hidden md:block',
         isDarkMode ? 'opacity-20 ' : ' opacity-30',
       ]"
     ></header>
     <header
-      :class="['absolute w-1/2 aspect-16/5 -skew-x-12 rounded-full bg-linear-to-r from-[#00c6cc] via-[#785ae4] to-secondary blur-[100px] right-10 button-0 hidden md:block',
+      :class="[
+        'absolute w-1/2 aspect-16/5 -skew-x-12 rounded-full bg-linear-to-r from-[#00c6cc] via-[#785ae4] to-secondary blur-[100px] right-10 button-0 hidden md:block',
         isDarkMode ? 'opacity-20' : 'opacity-30',
       ]"
     ></header>
@@ -27,15 +30,24 @@
             >Joshua Oluwaseun</span
           >
         </h1>
-        <p class="text-lg max-w-xl mx-auto lg:mx-0 font-semibold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto libero
-          quibusdam neque reiciendis non rerum animi quas, cum a obcaecati,
-          ratione corrupti atque autem quis, unde architecto eaque nobis fugiat.
+        <p  class="text-lg max-w-xl mx-auto lg:mx-0 font-semibold leading-relaxed">Junior Frontend Developer • React • Tailwind CSS • Building Responsive Web Apps</p>
+        <p
+          class="text-lg max-w-xl mx-auto lg:mx-0 font-semibold leading-relaxed"
+        >
+          I’m a Junior Frontend Developer trained at AltSchool Africa. I build
+          responsive, interactive web applications using React and modern CSS
+          frameworks.
+          <span class="block mt-2 font-normal opacity-80">
+            Currently seeking frontend internships and junior roles.
+          </span>
         </p>
+
         <div class="mt-6 flex justify-center items-center lg:justify-start">
-          <Button label="Hire Me" />
           <a
-            href=""
+            href="/Joshua_Oluwaseun_Resume.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
             :class="[
               'font-semibold rounded-full ml-2 border-2 text-lg w-[12rem] h-[55px] flex justify-center items-center',
               isDarkMode
@@ -44,6 +56,7 @@
             ]"
           >
             <Icon icon="line-md:download-loop" class="text-3xl" />
+
             <span class="ml-1">Resume</span>
           </a>
         </div>
@@ -51,19 +64,21 @@
       <aside
         class="container flex justify-center lg:justify-end mt-20 pr-10 lg:mt-0 items-center flex-wrap"
       >
-       
-       <div class="relative w-full max-w-110 aspect-square">
-  <div class="absolute inset-0 rounded-full bg-gradient-to-r from-[#00c6cc] via-[#785ae4] to-secondary animate-spin"></div>
-    <div class="absolute inset-[10px] rounded-full overflow-hidden bg-white">
-    <img 
-      class="w-full h-full object-cover" 
-      loading="lazy" 
-      src="@/assets/Images/King.jpg" 
-      alt="Hero Picture" 
-    />
-  </div>
-</div>
-       
+        <div class="relative w-full max-w-110 aspect-square">
+          <div
+            class="absolute inset-0 rounded-full bg-gradient-to-r from-[#00c6cc] via-[#785ae4] to-secondary animate-spin"
+          ></div>
+          <div
+            class="absolute inset-[10px] rounded-full overflow-hidden bg-white"
+          >
+            <img
+              class="w-full h-full object-cover"
+              loading="lazy"
+              src="@/assets/Images/King.jpg"
+              alt="Portrait of Joshua Oluwaseun, Junior Frontend Developer"
+            />
+          </div>
+        </div>
       </aside>
     </main>
   </section>
@@ -90,4 +105,3 @@ const { isDarkMode } = useDarkMode();
   filter: url(#wavy1);
 }
 </style>
-

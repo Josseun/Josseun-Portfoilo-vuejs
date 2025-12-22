@@ -37,12 +37,16 @@
     <!-- Actions Section -->
     <div class="px-6 pb-4 flex justify-between items-center">
       <a
-        href="liveLink"
+        :href="liveLink"
+        target="_blank"
+        rel="noopener noreferrer"
         class="text-secondary font-semibold hover:underline text-sm"
         >Live Demo</a
       >
       <a
-        href="codeLink"
+        :href="codeLink"
+        target="_blank"
+        rel="noopener noreferrer"
         class="text-secondary font-semibold hover:underline text-sm"
         >View code</a
       >
