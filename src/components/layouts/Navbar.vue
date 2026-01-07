@@ -76,8 +76,6 @@ import { ref } from "vue";
 const isMenuOpen = ref(false);
 const Menu = ref([
   { name: "Services", href: "#services" },
-  // { name: "Skills", href: "#skills" },
-  // { name: "Why me", href: "#whyme" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ]);

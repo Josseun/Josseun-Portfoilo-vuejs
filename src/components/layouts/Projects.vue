@@ -1,7 +1,7 @@
 <template>
   <section id="projects" class="relative w-11/12 px-16 mx-auto mt-32">
     <SectionHeader title="My Projects" />
-    <div class="grid md:grid-cols-2 lg:grid-cols-2 mt-20 gap-5">
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 mt-10 gap-5">
       <div class="" v-for="(project, index) in Projects" :key="index">
         <ProjectCard
           :title="project.title"
@@ -59,15 +59,4 @@ const Projects = ref([
   },
 ]);
 </script>
-<style>
-.swiper-button-prev,
-.swiper-button-next {
-  cursor: pointer;
-}
 
-.div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>

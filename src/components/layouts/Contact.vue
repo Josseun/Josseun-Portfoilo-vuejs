@@ -1,83 +1,90 @@
 <template>
-  <section class="mt-32" id="contact">
+  <section class="lg:mt-32 mt-50" id="contact">
     <SectionHeader title="Contact Me" />
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <form class="space-y-8">
-        <div v-for="(item, index) in inputs" :key="index">
-          <Input
-            :id="item.id"
-            :label="item.label"
-            :type="item.type"
-            :placeholder="item.placeholder"
-            :rows="rows"
-          />
-        </div>
-        <div class="flex justify-between">
-          <Button label="Send" />
 
-          <div class="mt-2 flex justify-center space-x-3 md:space-x-8">
-            <a
-              href="https://www.linkedin.com/in/josseun123/"
-              class="text-gray-600 hover:text-blue-500"
-            >
-              <Icon icon="fa-brands:twitter" style="font-size: 2rem" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/josseun123"
-              class="text-gray-600 hover:text-blue-700"
-            >
-              <Icon icon="fa-brands:linkedin" style="font-size: 2rem" />
-            </a>
-            <a
-              href="https://github.com/Josseun"
-              class="text-gray-600 hover:text-gray-800"
-            >
-              <Icon icon="fa-brands:github" style="font-size: 2rem" />
-            </a>
-            <a
-              href="https://www.upwork.com/freelancers/~0142f57b5fdb02dfa2"
-              class="text-gray-600 hover:text-pink-500"
-            >
-              <Icon icon="ri:upwork-fill" style="font-size: 2rem" />
-            </a>
-          </div>
-        </div>
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-3xl">
+      <form class="space-y-8" @submit.prevent="sendEmail">
+        <Input
+          id="email"
+          label="Your email"
+          type="email"
+          placeholder="email@example.com"
+          v-model="form.email"
+        />
+
+        <Input
+          id="subject"
+          label="Subject"
+          type="text"
+          placeholder="Let us know how we can help you"
+          v-model="form.subject"
+        />
+
+        <Input
+          id="message"
+          label="Message"
+          type="textarea"
+          placeholder="Leave a comment"
+          :rows="6"
+          v-model="form.message"
+        />
+
+        <Button :label="loading ? 'Sending...' : 'Send'" />
+
+        <p v-if="success" class="text-green-500">
+          Message sent successfully 🚀
+        </p>
+
+        <p v-if="error" class="text-red-500">
+          Something went wrong. Try again 😬
+        </p>
       </form>
     </div>
   </section>
 </template>
+
 <script setup>
-import { useDarkMode } from "@/composables/DarkMode";
+import emailjs from "@emailjs/browser";
+import { ref } from "vue";
 import SectionHeader from "@/components/UI/SectionHeader.vue";
 import Input from "@/components/UI/Input.vue";
 import Button from "@/components/UI/Button.vue";
-import { ref } from "vue";
 
-const rows = ref(6);
+const form = ref({
+  email: "",
+  subject: "",
+  message: "",
+});
 
-const { isDarkMode } = useDarkMode();
+const loading = ref(false);
+const success = ref(false);
+const error = ref(false);
 
-const inputs = ref([
-  {
-    id: "email",
-    label: "Your email",
-    type: "email",
-    placeholder: "email@example.com",
-    rows: undefined,
-  },
-  {
-    id: "subject",
-    label: "Subject",
-    type: "text",
-    placeholder: "Let us know how we can help you",
-    rows: undefined,
-  },
-  {
-    id: "massage",
-    label: "Massage",
-    type: "textarea",
-    placeholder: "Leave a comment",
-    rows: 6,
-  },
-]);
+const sendEmail = () => {
+  loading.value = true;
+  success.value = false;
+  error.value = false;
+
+  emailjs
+    .send(
+      "service_dvtvnd7",
+      "template_xfc538i",
+      {
+        from_email: form.value.email,
+        subject: form.value.subject,
+        message: form.value.message,
+      },
+      "DLtY8in1lzl8lC30Z"
+    )
+    .then(() => {
+      success.value = true;
+      form.value = { email: "", subject: "", message: "" };
+    })
+    .catch(() => {
+      error.value = true;
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+};
 </script>

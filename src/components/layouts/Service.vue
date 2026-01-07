@@ -1,8 +1,8 @@
 <template>
-  <section class="relative text-white mt-15" id="services">
+  <section class="relative text-white lg:mt-15 mt-50" id="services">
     <div class="max-w-7xl mx-auto px-4">
       <SectionHeader title="Services" />
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-20">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10">
         <ServiceCard
           v-for="service in services"
           :key="service.id"

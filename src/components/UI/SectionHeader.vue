@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2
-      class="text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-center text-[C9B59C]"
+      class="text-2xl md:text-4xl lg:text-6xl font-bold uppercase text-center text-[C9B59C]"
       data-aos="fade-up"
     >
       {{ title }}
