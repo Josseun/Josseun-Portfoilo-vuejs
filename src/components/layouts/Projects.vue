@@ -6,7 +6,7 @@
         <ProjectCard
           :title="project.title"
           :description="project.description"
-          :image="'/public' + project.image"
+          :image="'/' + project.image"
           :tags="project.tags"
           :liveLink="project.liveLink"
         />
@@ -24,28 +24,28 @@ const Projects = ref([
     title: "Portfolio",
     description:
       "Built with Vue.js and Tailwind CSS. A fully responsive single-page application optimized for all devices.",
-    image: "/portfolio.png",
+    image: "portfolio.png",
     liveLink: "/",
   },
   {
     title: "Space Tourism Website",
     description:
       "A fully responsive multi-page experience built with React, Tailwind CSS, and React Router, featuring smooth transitions and dynamic navigation.",
-    image: "/space-tourism.png",
+    image: "space-tourism.png",
     liveLink: "https://space-tourism-inky-rho.vercel.app/",
   },
   {
     title: "Blog Application",
     description:
       "A fully responsive Vue.js blog application powered by Vue Router and Tailwind CSS. Fetches and manages API data with structured loading states, error handling, and smooth navigation transitions.",
-    image: "/blog-app.png",
+    image: "blog-app.png",
     liveLink: "https://blog-application-xi-three.vercel.app/",
   },
   {
     title: "E-commerce Application",
     description:
       "Built a fully responsive e-commerce app with Next.js and Tailwind CSS, featuring smooth page transitions, API-driven product data, advanced cart state management, and secure checkout integration with Paystack.",
-    image: "/E-Commerce-Project.png",
+    image: "E-Commerce-Project.png",
     liveLink: "https://josseun-ecommerce.vercel.app/",
   },
   // {
