@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="relative w-11/12 px-16 mx-auto mt-32">
+  <section id="projects" class="relative w-11/12 mx-auto mt-32">
     <SectionHeader title="My Projects" />
     <div class="grid lg:grid-cols-2 mt-10 gap-5">
       <div class="" v-for="(project, index) in Projects" :key="index">

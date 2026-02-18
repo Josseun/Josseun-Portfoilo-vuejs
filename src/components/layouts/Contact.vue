@@ -1,5 +1,5 @@
 <template>
-  <section class="lg:mt-32 mt-50" id="contact">
+  <section class="lg:mt-32 mt-30" id="contact">
     <SectionHeader title="Contact Me" />
 
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-3xl">
