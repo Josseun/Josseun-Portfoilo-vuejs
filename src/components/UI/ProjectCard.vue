@@ -5,12 +5,17 @@
     <!-- Image Section -->
 
     <div class="w-full max-w-base h-base">
-      <a class="w-full h-full flex justify-center items-center" :href="liveLink" target="_blank" rel="noopener noreferrer">
+      <a
+        class="w-full h-full flex justify-center items-center"
+        :href="liveLink"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
           :src="image"
           :alt="title"
           loading="eager"
-          class="object-scale-down w-full h-full border lg:max-w-[482.66px] lg:max-h-[302.25px] border-gray-600 rounded-lg"
+          class="object-scale-down w-full h-full border border-gray-600 rounded-lg"
         />
       </a>
     </div>
