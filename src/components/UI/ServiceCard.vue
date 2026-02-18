@@ -1,12 +1,12 @@
 <template>
   <div
-    class="p-8 transition-all duration-300 cursor-pointer border-green-300 border-2 hover:shadow-xl"
+    class="p-8 transition-all duration-300 cursor-pointer font-body border-green-300 border-2 hover:shadow-xl"
   >
     <div class="flex justify-center mb-4">
       <Icon :icon="service.icon" class="text-6xl text-secondary" />
     </div>
 
-    <h3 class="text-xl font-bold mb-3 uppercase text-center text-secondary">
+    <h3 class="text-xl font-bold mb-3 uppercase text-center font-heading text-secondary">
       {{ service.title }}
     </h3>
 

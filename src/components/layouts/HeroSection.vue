@@ -49,7 +49,7 @@
             <img
               class="w-full h-full object-cover"
               loading="lazy"
-              src="@/assets/Images/King.jpg"
+              src="/King.jpg"
               alt="Portrait of Joshua Oluwaseun, Junior Frontend Developer"
             />
           </div>

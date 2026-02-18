@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-primary text-white"
+    class="min-h-screen font-body bg-primary text-white"
   >
     <Navbar />
     <HeroSection />
