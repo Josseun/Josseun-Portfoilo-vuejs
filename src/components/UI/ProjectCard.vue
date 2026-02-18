@@ -9,6 +9,7 @@
         <img
           :src="image"
           :alt="title"
+          loading="lazy"
           class="object-scale-down w-full h-full border border-gray-600 rounded-lg"
         />
       </a>
