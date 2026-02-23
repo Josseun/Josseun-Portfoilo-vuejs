@@ -22,7 +22,7 @@
           </span>
         </p>
 
-        <div class="mt-6 flex justify-center items-center lg:justify-start">
+        <!-- <div class="mt-6 flex justify-center items-center lg:justify-start">
           <a
             href="/Joshua_Oluwaseun_Resume.pdf"
             download
@@ -34,7 +34,7 @@
 
             <span class="ml-1">Resume</span>
           </a>
-        </div>
+        </div> -->
       </header>
       <aside
         class="container flex justify-center lg:justify-end mt-20 pr-10 lg:mt-0 items-center flex-wrap"
@@ -47,9 +47,9 @@
             class="absolute inset-2.5 rounded-full overflow-hidden bg-white"
           >
             <img
-              class="w-full h-full object-cover"
+              class="w-full h-full  object-cover"
               loading="lazy"
-              src="/King.jpg"
+              src="/profile.jpg"
               alt="Portrait of Joshua Oluwaseun, Junior Frontend Developer"
             />
           </div>
