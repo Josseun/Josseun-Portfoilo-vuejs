@@ -48,12 +48,13 @@ const Projects = ref([
     image: "E-Commerce-Project.png",
     liveLink: "https://josseun-ecommerce.vercel.app/",
   },
-  // {
-  //   title: "",
-  //   description: "",
-  //   image: "",
-  //   liveLink: "",
-  // },
+  {
+    title: "MantaAir Flight Booking App",
+    description:
+      "MantaAir is a flight booking application built with Vue 3 and Vite, integrated with the MantaHQ backend API for real user authentication and data persistence. It features signup/login with JWT token auth, protected route guards, form validation, and a personalized user dashboard — all styled with Tailwind CSS.",
+    image: "manta-air.png",
+    liveLink: "https://manta-air.vercel.app/",
+  },
   // {
   //   title: "",
   //   description: "",
